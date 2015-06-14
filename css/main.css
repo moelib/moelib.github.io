@@ -1,0 +1,33 @@
+html, body, div, p, ul, li, ol, dl, dt, dd, pre, code, table, tr, td, form, fieldset, legend, button, input, textarea, h1, h2, h3, h4, h5, h6, hr, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	font-size: medium;
+	width: 1024px;
+	margin:0 auto;
+}
+
+a{
+	color:#333;
+	text-decoration:none; 
+}
+
+a:hover {
+	color:#CC3300;
+	text-decoration:underline;
+}
+
+footer {
+	margin-top: 5px;
+	text-align: center;
+	font-size: 14px;
+	/* [disabled]line-height: normal; */
+}
+
+#working {
+	width:500px;
+	margin:0 auto;
+	margin-bottom:10px;
+}
