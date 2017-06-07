@@ -1,0 +1,122 @@
+[
+    {
+        "name":"0x40-web",
+        "author":["mon"],
+        "desc":"HTML5/CSS3 Canvas + Web Audio clone of the 0x40 Hues Flash.",
+        "source":"https://github.com/mon/0x40-web",
+        "link":"",
+        "cats":["audio"]
+    },
+    {
+        "name":"ABPlayerHTML5",
+        "author":["jabbany"],
+        "desc":"Video Player for danmaku comments. ABPlayer in HTML5.",
+        "source":"https://github.com/jabbany/ABPlayerHTML5",
+        "link":"",
+        "cats":["danmaku"]
+    },
+    {
+        "name":"CommentCoreLibrary",
+        "author":["jabbany"],
+        "desc":"Javascript Live Comment (Danmaku) Engine Implementation.",
+        "source":"https://github.com/jabbany/CommentCoreLibrary",
+        "link":"",
+        "cats":["danmaku"]
+    },
+    {
+        "name":"Danmaku",
+        "author":["weizhenye"],
+        "desc":"High performance JavaScript danmaku engine.",
+        "source":"https://github.com/weizhenye/Danmaku",
+        "link":"",
+        "cats":["danmaku"]
+    },
+    {
+        "name":"danmaku2ass",
+        "author":["m13253"],
+        "desc":"Convert comments from Niconico/AcFun/bilibili to ASS format.",
+        "source":"https://github.com/m13253/danmaku2ass",
+        "link":"",
+        "cats":["danmaku"]
+    },
+    {
+        "name":"DPlayer",
+        "author":["DIYgod"],
+        "desc":"HTML5 danmaku video player.",
+        "source":"https://github.com/DIYgod/DPlayer",
+        "link":"",
+        "cats":["danmaku"]
+    },
+    {
+        "name":"Albireo",
+        "author":["lordfriend"],
+        "desc":"A bangumi auto download and management project. It has a webclient called Deneb.",
+        "source":"https://github.com/lordfriend/Albireo",
+        "link":"",
+        "cats":["downloader"]
+    },
+    {
+        "name":"anilist-crawler",
+        "author":["soruly"],
+        "desc":"Crawl data from anilist API and store in elasticsearch.",
+        "source":"https://github.com/soruly/anilist-crawler",
+        "link":"",
+        "cats":["downloader"]
+    },
+    {
+        "name":"Danbooru Downloader",
+        "author":["Nandaka"],
+        "desc":"Downloader for Danbooru",
+        "source":"https://github.com/Nandaka/DanbooruDownloader",
+        "link":"",
+        "cats":["downloader"]
+    },
+    {
+        "name":"DMHY",
+        "author":["yaqinking"],
+        "desc":"Easily download/auto-download torrent(s) from share.dmhy.org / acg.rip etc. sites for OS X.",
+        "source":"https://github.com/yaqinking/DMHY",
+        "link":"",
+        "cats":["downloader"]
+    },
+    {
+        "name":"JComicDownloader",
+        "author":["abc9070410"],
+        "desc":"Tool for downloading some comics and light novels from China.",
+        "source":"https://github.com/abc9070410/JComicDownloader",
+        "link":"",
+        "cats":["downloader"]
+    },
+    {
+        "name":"PixivUtil (Pixiv Downloader)",
+        "author":["Nandaka"],
+        "desc":"Downloader and tag manager for [Pixiv](https://www.pixiv.net/).",
+        "source":"https://github.com/Nandaka/PixivUtil2",
+        "link":"",
+        "cats":["downloader"]
+    },
+    {
+        "name":"Pixiv Illust",
+        "author":["HakurouKen"],
+        "desc":"Both a downloader and a third-party Node.js api for [Pixiv](https://www.pixiv.net/). ",
+        "source":"https://github.com/HakurouKen/pixiv-illust",
+        "link":"",
+        "cats":["downloader"]
+    },
+    {
+        "name":"you-get",
+        "author":["soimort"],
+        "desc":"Dumb downloader that scrapes the web.",
+        "source":"https://github.com/soimort/you-get",
+        "link":"",
+        "cats":["downloader"]
+    },
+    {
+        "name":"AniDB API",
+        "author":["AniDB"],
+        "desc":"Official API for AniDB.",
+        "source":"",
+        "link":"https://wiki.anidb.net/w/API",
+        "cats":["datasource"]
+    }
+]

@@ -38,90 +38,86 @@
         <a href="#" class="item">Articles</a>
     </div>
 </div>
-<div class="ui container" style="margin-bottom:1rem">
-    <button id="gogogo" class="ui primary button">Go~</button>
+<div class="ui centered grid">
+    <div class="ui container" style="margin:1rem 0">
+        <div class="ui buttons">
+            <button class="pfbtn ui toggle button active" data-value=''>All</button>
+            <button class="pfbtn ui toggle button" data-value='audio'>Audio</button>
+            <button class="pfbtn ui toggle button" data-value='danmaku'>Danmaku</button>
+            <button class="pfbtn ui toggle button" data-value='downloader'>Downloader</button>
+            <button class="pfbtn ui toggle button" data-value='datasource'>DataSource</button>
+        </div>
+    </div>
 </div>
 <div class="ui container">
-    <div id="devcards" class="ui cards">
-        <div rv-hide="fade.do" class="card">
+    <div id="devcards" class="ui three stackable cards">
+        <div rv-each-project="projects" rv-hide="project.hide" class="ui card">
             <div class="content">
-                <div class="header">0x40-web</div>
-                <div class="meta">mon</div>
+                <div class="header">{project.name}</div>
+                <div class="meta">{project.author}</div>
                 <div class="description">
-                    HTML5/CSS3 Canvas + Web Audio clone of the 0x40 Hues Flash.
+                    {project.desc}
                 </div>
             </div>
-            <a href="https://github.com/mon/0x40-web">
-                <div class="ui bottom attached button">
+            <div class="ui two bottom attached buttons">
+                <div rv-on-click="moe.goSource" rv-if="project.source" class="ui button">
                     <i class="github icon"></i> Source
                 </div>
-            </a>
-        </div>
-        <div class="card">
-            <div class="content">
-                <div class="header">DPlayer</div>
-                <div class="meta">DIYgod</div>
-                <div class="description">
-                    HTML5 danmaku video player.
-                </div>
-            </div>
-            <a href="https://github.com/DIYgod/DPlayer">
-                <div class="ui bottom attached button">
-                    <i class="github icon"></i> Source
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <div class="content">
-                <div class="header">Albireo</div>
-                <div class="meta">lordfriend</div>
-                <div class="description">
-                    A bangumi auto download and management project. It has a webclient called Deneb.
-                </div>
-            </div>
-            <a href="https://github.com/lordfriend/Albireo">
-                <div class="ui bottom attached button">
-                    <i class="github icon"></i> Source
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <div class="content">
-                <div class="header">AniDB API</div>
-                <div class="meta">AniDB</div>
-                <div class="description">
-                    Official API for AniDB.
-                </div>
-            </div>
-            <a href="https://wiki.anidb.net/w/API">
-                <div class="ui bottom attached button">
+                <div rv-on-click="moe.goLink" rv-if="project.link" class="ui button">
                     <i class="linkify icon"></i> Link
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/semantic.min.js"></script>
 <script src="js/rivets.bundled.min.js"></script>
+<script src="js/lodash.min.js"></script>
 <script>
-    var fade = {
-        do: false
-    };
+    $(window).on('load', function () {
+        var pdata;
+        var pfilter = [];
 
-    rivets.binders.hide = function(el, value){
-        if(value){
-            $(el).fadeOut(200);
-        }else{
-            $(el).fadeIn(200);
+        var moe = {
+            goSource: function(evt, data){
+                window.open(data.project.source);
+            },
+            goLink: function(evt, data){
+                window.open(data.project.link);
+            }
+        };
+
+        rivets.binders.hide = function (el, value) {
+            if (value) {
+                $(el).hide();
+            } else {
+                $(el).fadeIn(500);
+            }
         }
-    }
 
-    rivets.bind($('#devcards'), {fade: fade})
+        $.getJSON("data/dev.json", function(data){ 
+            pdata = data;
+            rivets.bind($('#devcards'), { 
+                projects: pdata,
+                moe: moe
+            });
+        });
 
-    $('#gogogo').click(function(){
-        fade.do = !fade.do;
-    });
+        $('.pfbtn').click(function (evt) {
+            $(this).addClass('active').siblings().removeClass('active');
+            pfilter.splice(0,pfilter.length);
+            if($(this).data('value')!="") pfilter.push($(this).data('value'));
+
+            _.each(pdata, function(project){
+                if(_.intersection(project.cats, pfilter).length == pfilter.length || pfilter.length == 0){
+                    project.hide = false; 
+                }else{
+                    project.hide = true; 
+                }
+            })
+        });
+    });    
 </script>
 </body>
 </html>
