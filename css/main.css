@@ -31,6 +31,10 @@ a:hover {
 	margin-right: 1.5em;
 }
 
+#langsel {
+	background: rgba(224,225,226,.8)
+}
+
 .main.content {
 	min-height: 500px;
 }
