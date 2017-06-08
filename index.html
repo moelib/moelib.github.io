@@ -29,55 +29,82 @@
     </script>
 </head>
 <body>
-<div class="ui borderless main menu">
+<div class="ui inverted borderless main menu">
     <div class="ui container">
         <div href="#" class="header item">
-            <img class="logo" src="img/logo.png"> moelib
+            moelib
         </div>
-        <a href="#" class="item">Blog</a>
-        <a href="#" class="item">Articles</a>
-    </div>
-</div>
-<div class="ui centered grid">
-    <div class="ui container" style="margin:1rem 0">
-        <div class="ui buttons">
-            <button class="pfbtn ui toggle button active" data-value=''>All</button>
-            <button class="pfbtn ui toggle button" data-value='audio'>Audio</button>
-            <button class="pfbtn ui toggle button" data-value='danmaku'>Danmaku</button>
-            <button class="pfbtn ui toggle button" data-value='downloader'>Downloader</button>
-            <button class="pfbtn ui toggle button" data-value='datasource'>DataSource</button>
-        </div>
-    </div>
-</div>
-<div class="ui container">
-    <div id="devcards" class="ui three stackable cards">
-        <div rv-each-project="projects" rv-hide="project.hide" class="ui card">
-            <div class="content">
-                <div class="header">{project.name}</div>
-                <div class="meta">{project.author}</div>
-                <div class="description">
-                    {project.desc}
+        <a href="/" class="item" data-i18n="menu.library"></a>
+        <a href="#" class="item" data-i18n="menu.about"></a>
+        <div class="right item">
+            <div id="langsel" class="ui dropdown icon button">
+                <i class="world icon"></i>
+                <span class="text">Select Language</span>
+                <div class="menu">
+                    <div class="item" data-value="zh">中文</div>
+                    <div class="item" data-value="en">English</div>
+                    <div class="item" data-value="jp">日本語</div>
                 </div>
             </div>
-            <div class="ui two bottom attached buttons">
-                <div rv-on-click="moe.goSource" rv-if="project.source" class="ui button">
-                    <i class="github icon"></i> Source
+        </div>    
+    </div>    
+</div>
+<div class="main content">
+    <div class="ui centered grid">
+        <div class="ui container" style="margin:1rem 0">
+            <div class="ui buttons">
+                <button class="pfbtn ui toggle button active" data-value=''>All</button>
+                <button class="pfbtn ui toggle button" data-value='audio'>Audio</button>
+                <button class="pfbtn ui toggle button" data-value='danmaku'>Danmaku</button>
+                <button class="pfbtn ui toggle button" data-value='downloader'>Downloader</button>
+                <button class="pfbtn ui toggle button" data-value='datasource'>DataSource</button>
+            </div>
+        </div>
+    </div>
+    <div class="ui container">
+        <div id="devcards" class="ui three stackable cards">
+            <div rv-each-project="projects" rv-hide="project.hide" class="ui card">
+                <div class="content">
+                    <div class="header">{project.name}</div>
+                    <div class="meta">{project.author}</div>
+                    <div class="description">
+                        {project.desc}
+                    </div>
                 </div>
-                <div rv-on-click="moe.goLink" rv-if="project.link" class="ui button">
-                    <i class="linkify icon"></i> Link
+                <div class="ui two bottom attached buttons">
+                    <div rv-on-click="moe.goSource" rv-if="project.source" class="ui button">
+                        <i class="github icon"></i> Source
+                    </div>
+                    <div rv-on-click="moe.goLink" rv-if="project.link" class="ui button">
+                        <i class="linkify icon"></i> Link
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">   
+      <div>
+          Site made with <i aria-label="love" class="ui centered mini heart icon" style="color:#bd081c"></i>by <a href="http://weibo.com/hexen" target="_blank">Hexen</a>. 
+          <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+          <span id="busuanzi_container_site_pv">Visits:<span id="busuanzi_value_site_pv"></span></span>
+      </div>
+      <div>
+        Copyright 2017 by <a href="http://weibo.com/hexen" target="_blank">Hexen</a>. All Rights Reserved.
+      </div>
     </div>
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/semantic.min.js"></script>
 <script src="js/rivets.bundled.min.js"></script>
 <script src="js/lodash.min.js"></script>
+<script src="js/i18next.min.js"></script>
 <script>
     $(window).on('load', function () {
         var pdata;
         var pfilter = [];
+        var locale = i18n.lng() || (navigator.language && navigator.language.substr(0,2)) || 'en';
 
         var moe = {
             goSource: function(evt, data){
@@ -88,6 +115,25 @@
             }
         };
 
+        var refreshI18N = function(){
+            $("body").i18n();
+        };
+
+        // init elements
+        $('.ui.dropdown').dropdown();
+
+        // init i18n
+        $('#langsel').dropdown('set selected', locale);
+        i18n.init({ lng: locale }, function(err, t) {
+            refreshI18N();
+        });
+
+        $('#langsel .item').click(function(evt){
+            i18n.setLng($(this).data("value"), refreshI18N);
+        });
+        
+
+        // init rivets settings
         rivets.binders.hide = function (el, value) {
             if (value) {
                 $(el).hide();

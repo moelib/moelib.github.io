@@ -8,22 +8,38 @@ a{
 	text-decoration:none; 
 }
 
+.inverted a{
+	color:rgba(255,255,255,.8);
+	text-decoration:none; 
+}
+
 a:hover {
 	color:#bd081c;
 	text-decoration:none;
 }
 
-footer {
-	margin-top: 5px;
-	text-align: center;
-	font-size: 14px;
+.main.menu {
+	background: #3c474a url(../img/hbg.png) no-repeat center top !important;
+}
+
+.main.menu .header.item {
+	font-family:sans-serif;
+	font-size:large;
 }
 
 .main.menu .item img.logo {
 	margin-right: 1.5em;
 }
 
+.main.content {
+	min-height: 500px;
+}
 
-/*.main.menu .header.item {
-	font-family: "gunplay"
-}*/
+.footer {
+	margin-top: 5rem !important;
+	background: #3c474a url(../img/fbg.png) no-repeat center bottom !important;
+}
+
+.footer .container div {
+	margin: 0.2rem 0 !important;
+}
