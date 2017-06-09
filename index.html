@@ -177,7 +177,7 @@
         $(".ui.dropdown").dropdown();
 
         // init i18n        
-        i18n.init(function(err, t) {
+        i18n.init({load:'unspecific'}, function(err, t) {
             $("#langsel").dropdown("set selected", i18n.lng());
             refreshI18N();
         });        
