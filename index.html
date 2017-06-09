@@ -50,14 +50,33 @@
     </div>    
 </div>
 <div class="main content">
-    <div class="ui centered grid">
-        <div class="ui container" style="margin:1rem 0">
-            <div class="ui buttons">
-                <button class="pfbtn ui toggle button active" data-value=''>All</button>
-                <button class="pfbtn ui toggle button" data-value='audio'>Audio</button>
-                <button class="pfbtn ui toggle button" data-value='danmaku'>Danmaku</button>
-                <button class="pfbtn ui toggle button" data-value='downloader'>Downloader</button>
-                <button class="pfbtn ui toggle button" data-value='datasource'>DataSource</button>
+    <div class="filters ui centered grid" style="margin:1rem 0">   
+        <div class="marginva">
+            <i class="large filter icon"></i>
+        </div>
+        <div>
+            <select id="pcfilter" class="ui search dropdown">
+                <option value="all" data-i18n="filter.all" selected></option>
+                <option value="audio" data-i18n="filter.audio"></option>
+                <option value="danmaku" data-i18n="filter.danmaku"></option>
+                <option value="downloader" data-i18n="filter.downloader"></option>
+                <option value="database" data-i18n="filter.database"></option>
+                <option value="imageboard" data-i18n="filter.imageboard"></option>
+                <option value="imageprocessing" data-i18n="filter.imageprocessing"></option>
+                <option value="imagerecognition" data-i18n="filter.imagerecognition"></option>
+                <option value="imagereversesearch" data-i18n="filter.imagereversesearch"></option>
+                <option value="mobileapp" data-i18n="filter.mobileapp"></option>
+                <option value="programlang" data-i18n="filter.programlang"></option>
+                <option value="subtitle" data-i18n="filter.subtitle"></option>
+                <option value="tool" data-i18n="filter.tool"></option>
+                <option value="web" data-i18n="filter.web"></option>
+                <option value="uncat" data-i18n="filter.uncat"></option>
+            </select>
+        </div>
+        <div>
+            <div class="ui icon input">
+                <input id="psinput" class="prompt" type="text" data-i18n="[placeholder]misc.search">
+                <i class="search icon"></i>
             </div>
         </div>
     </div>
@@ -80,6 +99,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="noresgrid" class="ui centered grid" rv-hide="moe.rCount">
+            <img src="img/noresult.jpg" />
         </div>
     </div>
 </div>
@@ -104,7 +126,6 @@
     $(window).on('load', function () {
         var pdata;
         var pfilter = [];
-        var locale = i18n.lng() || (navigator.language && navigator.language.substr(0,2)) || 'en';
 
         var moe = {
             goSource: function(evt, data){
@@ -112,23 +133,56 @@
             },
             goLink: function(evt, data){
                 window.open(data.project.link);
-            }
+            },
+            rCount: 9999
         };
 
         var refreshI18N = function(){
             $("body").i18n();
+            $("#pcfilter").dropdown("set text", $.t("filter."+$('#pcfilter').dropdown("get value")[0]));
+        };
+
+        // get result count
+        var getRCount = function(){
+            return _.countBy(pdata, function(o){
+                if(o.hide) return 'hide';
+                else return 'show';
+            })['show'];
+        }
+
+        var psearch = function(){
+            var kw = $("#psinput").val().trim();
+            pfilter.splice(0,pfilter.length);
+            if($("#pcfilter").val()!="all") pfilter.push($("#pcfilter").val());
+
+            _.each(pdata, function(project){
+                if(_.intersection(project.cats, pfilter).length == pfilter.length || pfilter.length == 0){
+                    if(kw && kw != ""){
+                        if(!!~project.name.toLowerCase().indexOf(kw) || !!~project.author.join(',').toLowerCase().indexOf(kw) || !!~project.desc.toLowerCase().indexOf(kw) || !!~project.cats.join(',').toLowerCase().indexOf(kw) )
+                            project.hide = false;
+                        else
+                            project.hide = true;
+                    }else{
+                        project.hide = false;
+                    }
+                }else{
+                    project.hide = true;
+                }
+            })
+
+            moe.rCount = getRCount();
         };
 
         // init elements
-        $('.ui.dropdown').dropdown();
+        $(".ui.dropdown").dropdown();
 
-        // init i18n
-        $('#langsel').dropdown('set selected', locale);
-        i18n.init({ lng: locale }, function(err, t) {
+        // init i18n        
+        i18n.init(function(err, t) {
+            $("#langsel").dropdown("set selected", i18n.lng());
             refreshI18N();
-        });
+        });        
 
-        $('#langsel .item').click(function(evt){
+        $("#langsel .item").click(function(evt){
             i18n.setLng($(this).data("value"), refreshI18N);
         });
         
@@ -144,24 +198,23 @@
 
         $.getJSON("data/dev.json", function(data){ 
             pdata = data;
-            rivets.bind($('#devcards'), { 
+            moe.rCount = getRCount();
+
+            rivets.bind($("#devcards"), { 
                 projects: pdata,
                 moe: moe
             });
+            rivets.bind($("#noresgrid"), {
+                moe: moe
+            });
+        });        
+
+        $("#psinput").on("input", function (evt) {
+            psearch();
         });
 
-        $('.pfbtn').click(function (evt) {
-            $(this).addClass('active').siblings().removeClass('active');
-            pfilter.splice(0,pfilter.length);
-            if($(this).data('value')!="") pfilter.push($(this).data('value'));
-
-            _.each(pdata, function(project){
-                if(_.intersection(project.cats, pfilter).length == pfilter.length || pfilter.length == 0){
-                    project.hide = false; 
-                }else{
-                    project.hide = true; 
-                }
-            })
+        $("#pcfilter").on("change", function (evt) {
+            psearch();
         });
     });    
 </script>

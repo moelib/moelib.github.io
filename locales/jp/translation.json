@@ -1,0 +1,26 @@
+{
+    "menu":{
+        "library": "ライブラリ",
+        "about": "お問合せ"
+    },
+    "filter":{
+        "all": "すべて",
+        "audio": "オーディオ",
+        "danmaku": "弾幕",
+        "downloader": "ダウンローダー",
+        "database": "データベース",
+        "imageboard": "画像掲示板",
+        "imageprocessing": "画像処理",
+        "imagerecognition": "画像認識",
+        "imagereversesearch": "画像で検索",
+        "mobileapp": "アプリ",
+        "programlang": "プログラミング言語",
+        "subtitle": "字幕",
+        "tool": "ツール",
+        "web": "Web",
+        "uncat": "未分類"
+    },
+    "misc":{
+        "search": "検索..."
+    }
+}

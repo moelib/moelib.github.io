@@ -18,6 +18,10 @@ a:hover {
 	text-decoration:none;
 }
 
+.marginva{
+	margin:auto 0;
+}
+
 .main.menu {
 	background: #3c474a url(../img/hbg.png) no-repeat center top !important;
 }
@@ -36,7 +40,12 @@ a:hover {
 }
 
 .main.content {
-	min-height: 500px;
+	min-height: 80%;
+}
+
+#noresgrid {
+	margin-top: 2em;
+	display: none;
 }
 
 .footer {
