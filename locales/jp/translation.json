@@ -22,5 +22,10 @@
     },
     "misc":{
         "search": "検索..."
+    },
+    "about":{
+        "intro":"紹介",
+        "introduction":"moelibは二次元ファンのために二次元関連情報を提供するサイトですヽ(・∀・)ノ。",
+        "contributors":"協力者"
     }
 }

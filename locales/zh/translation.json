@@ -22,5 +22,10 @@
     },
     "misc":{
         "search": "检索..."
+    },
+    "about":{
+        "intro":"网站介绍",
+        "introduction":"moelib致力于为广大二次元爱好者提供二次元相关信息，目前主要面向开发人员提供相应内容",
+        "contributors":"攻城人员"
     }
 }

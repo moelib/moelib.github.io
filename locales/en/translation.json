@@ -22,5 +22,10 @@
     },
     "misc":{
         "search": "Search..."
+    },
+    "about":{
+        "intro":"Introduction",
+        "introduction":"Moelib aims for providing various nijigen resources and informations",
+        "contributors":"Contributors"
     }
 }

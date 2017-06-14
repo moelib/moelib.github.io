@@ -11,6 +11,7 @@
         "name":"ABPlayerHTML5",
         "author":["jabbany"],
         "desc":"Video Player for danmaku comments. ABPlayer in HTML5.",
+        "desc_zh":"弹幕播放器，HTML5版的ABPlayer",
         "source":"https://github.com/jabbany/ABPlayerHTML5",
         "link":"",
         "cats":["danmaku"]
