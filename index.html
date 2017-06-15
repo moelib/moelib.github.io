@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="二次元,萌,资源,应用,技术,dev,app,moe,api,lib,library,萌え,リブ,ライブラリ,アプリ,資源">
+    <meta name="description" content="Moelib aims for providing various nijigen resources and informations.">
+    <title>MoeLib</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/semantic.min.css" rel="stylesheet" type="text/css">
+    <link href="css/icon.min.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?6830939f784f4956acb6f0d033c21ee3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-64105900-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+<div class="ui inverted borderless main menu">
+    <div class="ui container">
+        <div href="#" class="header item">
+            moelib
+        </div>
+        <a href="/" class="item" data-i18n="menu.library"></a>
+        <a href="/about.html" class="item" data-i18n="menu.about"></a>
+        <div class="right item">
+            <div id="langsel" class="ui dropdown icon button">
+                <i class="world icon"></i>
+                <span class="text">Select Language</span>
+                <div class="menu">
+                    <div class="item" data-value="zh">中文</div>
+                    <div class="item" data-value="en">English</div>
+                    <div class="item" data-value="jp">日本語</div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<div class="main content">
+    <div class="ui text container message" data-i18n="[html]library.header"></div>
+    <div class="filters ui centered grid" style="margin:1rem 0">   
+        <div class="marginva">
+            <i class="large filter icon"></i>
+        </div>
+        <div>
+            <select id="pcfilter" class="ui search dropdown">
+                <option value="all" data-i18n="filter.all" selected></option>
+                <option value="audio" data-i18n="filter.audio"></option>
+                <option value="danmaku" data-i18n="filter.danmaku"></option>
+                <option value="downloader" data-i18n="filter.downloader"></option>
+                <option value="database" data-i18n="filter.database"></option>
+                <option value="imageboard" data-i18n="filter.imageboard"></option>
+                <option value="imageprocessing" data-i18n="filter.imageprocessing"></option>
+                <option value="imagerecognition" data-i18n="filter.imagerecognition"></option>
+                <option value="imagereversesearch" data-i18n="filter.imagereversesearch"></option>
+                <option value="mobileapp" data-i18n="filter.mobileapp"></option>
+                <option value="programlang" data-i18n="filter.programlang"></option>
+                <option value="subtitle" data-i18n="filter.subtitle"></option>
+                <option value="tool" data-i18n="filter.tool"></option>
+                <option value="web" data-i18n="filter.web"></option>
+                <option value="uncat" data-i18n="filter.uncat"></option>
+            </select>
+        </div>
+        <div>
+            <div class="ui icon input">
+                <input id="psinput" class="prompt" type="text" data-i18n="[placeholder]misc.search">
+                <i class="search icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="ui container">
+        <div id="devcards" class="ui three stackable cards">
+            <div rv-each-project="projects" rv-hide="project.hide" class="ui card">
+                <div class="content">
+                    <div class="header">{project.name}</div>
+                    <div class="meta">{project.author}</div>
+                    <div rv-html="moe.getDesc | call moe.locale project" class="description">
+                    </div>
+                </div>
+                <div class="ui two bottom attached buttons">
+                    <div rv-on-click="moe.goSource" rv-if="project.source" class="ui button">
+                        <i class="github icon"></i> Source
+                    </div>
+                    <div rv-on-click="moe.goLink" rv-if="project.link" class="ui button">
+                        <i class="linkify icon"></i> Link
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="noresgrid" class="ui centered grid" rv-hide="moe.rCount">
+            <img src="img/noresult.jpg" />
+        </div>
+    </div>
+</div>
+<div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">   
+      <div>
+          Site made with <i aria-label="love" class="ui centered mini heart icon" style="color:#bd081c"></i>by <a href="http://weibo.com/hexen" target="_blank">Hexen</a>. 
+          <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+          <span id="busuanzi_container_site_pv">Visits:<span id="busuanzi_value_site_pv"></span></span>
+      </div>
+      <div>
+        Copyright 2017 by <a href="http://weibo.com/hexen" target="_blank">Hexen</a>. All Rights Reserved.
+      </div>
+    </div>
+</div>
+
+<style>
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+
+    @keyframes octocat-wave {
+        0%,
+        100% {
+            transform: rotate(0)
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg)
+        }
+        40%,
+        80% {
+            transform: rotate(10deg)
+        }
+    }
+
+    @media (max-width:500px) {
+        .github-corner:hover .octo-arm {
+            animation: none
+        }
+        .github-corner .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+    }
+</style>
+<script src="js/jquery.min.js"></script>
+<script src="js/semantic.min.js"></script>
+<script src="js/rivets.bundled.min.js"></script>
+<script src="js/lodash.min.js"></script>
+<script src="js/i18next.min.js"></script>
+<script>
+    $(window).on('load', function () {
+        var pdata;
+        var pfilter = [];
+
+        var moe = {
+            goSource: function(evt, data){
+                window.open(data.project.source);
+            },
+            goLink: function(evt, data){
+                window.open(data.project.link);
+            },
+            getDesc: function(locale,data){
+                return data["desc_"+locale] || data.desc;
+            },
+            locale: "en",
+            rCount: 9999
+        };
+
+        var refreshI18N = function(){
+            $("body").i18n();
+            $("#pcfilter").dropdown("set text", $.t("filter."+$('#pcfilter').dropdown("get value")[0]));
+        };
+
+        // get result count
+        var getRCount = function(){
+            return _.countBy(pdata, function(o){
+                if(o.hide) return 'hide';
+                else return 'show';
+            })['show'];
+        }
+
+        var psearch = function(){
+            var kw = $("#psinput").val().trim();
+            pfilter.splice(0,pfilter.length);
+            if($("#pcfilter").val()!="all") pfilter.push($("#pcfilter").val());
+
+            _.each(pdata, function(project){
+                if(_.intersection(project.cats, pfilter).length == pfilter.length || pfilter.length == 0){
+                    if(kw && kw != ""){
+                        if(!!~project.name.toLowerCase().indexOf(kw) || !!~project.author.join(',').toLowerCase().indexOf(kw) || !!~project.desc.toLowerCase().indexOf(kw) || !!~project.cats.join(',').toLowerCase().indexOf(kw) )
+                            project.hide = false;
+                        else
+                            project.hide = true;
+                    }else{
+                        project.hide = false;
+                    }
+                }else{
+                    project.hide = true;
+                }
+            })
+
+            moe.rCount = getRCount();
+        };
+
+        // init elements
+        $(".ui.dropdown").dropdown();
+
+        // init i18n        
+        i18n.init({load:'unspecific'}, function(err, t) {
+            $("#langsel").dropdown("set selected", i18n.lng());
+            moe.locale = i18n.lng();
+            refreshI18N();
+        });        
+
+        $("#langsel .item").click(function(evt){
+            i18n.setLng($(this).data("value"), refreshI18N);
+            moe.locale = i18n.lng();
+        });
+        
+
+        // init rivets settings
+        rivets.binders.hide = function (el, value) {
+            if (value) {
+                $(el).hide();
+            } else {
+                $(el).fadeIn(500);
+            }
+        }
+
+        $.getJSON("data/dev.json", function(data){ 
+            pdata = data;
+            moe.rCount = getRCount();
+
+            rivets.bind($("#devcards"), { 
+                projects: pdata,
+                moe: moe
+            });
+            rivets.bind($("#noresgrid"), {
+                moe: moe
+            });
+        });        
+
+        $("#psinput").on("input", function (evt) {
+            psearch();
+        });
+
+        $("#pcfilter").on("change", function (evt) {
+            psearch();
+        });
+    });    
+</script>
+</body>
+</html>

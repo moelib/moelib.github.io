@@ -1,0 +1,34 @@
+{
+    "menu":{
+        "library": "库",
+        "about": "关于"
+    },
+    "filter":{
+        "all": "所有分类",
+        "audio": "音频",
+        "danmaku": "弹幕",
+        "downloader": "下载器",
+        "database": "数据源",
+        "imageboard": "贴图板",
+        "imageprocessing": "图像处理",
+        "imagerecognition": "图像识别",
+        "imagereversesearch": "图像反查",
+        "mobileapp": "手机应用",
+        "programlang": "编程语言",
+        "subtitle": "字幕",
+        "tool": "工具",
+        "web": "Web",
+        "uncat": "未分类"
+    },
+    "misc":{
+        "search": "检索..."
+    },
+    "library":{
+        "header": "<p>下面所列的都是与二次元相关的项目和库。使用过滤器搜索你想要的内容: )</p>"
+    },
+    "about":{
+        "intro":"网站介绍",
+        "introduction":"moelib致力于为广大二次元爱好者提供二次元相关信息，目前主要面向开发人员提供一些有帮助的内容",
+        "thanks":"感谢"
+    }
+}

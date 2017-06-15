@@ -1,0 +1,34 @@
+{
+    "menu":{
+        "library": "Library",
+        "about": "About"
+    },
+    "filter":{
+        "all": "All Categories",
+        "audio": "Audio",
+        "danmaku": "Danmanku",
+        "downloader": "Downloader",
+        "database": "Database",
+        "imageboard": "Image Board",
+        "imageprocessing": "Image Processing",
+        "imagerecognition": "Image Recognition",
+        "imagereversesearch": "Image Reverse Search",
+        "mobileapp": "Mobile Apps",
+        "programlang": "Programming Languages",
+        "subtitle": "Subtitles",
+        "tool": "Tools",
+        "web": "Web",
+        "uncat": "Uncategorized"
+    },
+    "misc":{
+        "search": "Search..."
+    },
+    "library":{
+        "header": "<p>All of the projects or libraries listed below are nijigen-related. Use filters to find what you want: ) </p>"
+    },
+    "about":{
+        "intro":"Introduction",
+        "introduction":"Moelib aims for providing various nijigen resources and informations",
+        "thanks":"Thanks"
+    }
+}

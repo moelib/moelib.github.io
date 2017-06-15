@@ -1,0 +1,65 @@
+/*html, body, div, p, ul, li, ol, dl, dt, dd, pre, code, table, tr, td, form, fieldset, legend, button, input, textarea, h1, h2, h3, h4, h5, h6, hr, blockquote {
+  margin: 0;
+  padding: 0;
+}*/
+
+a{
+	color:#3c474a;
+	text-decoration:none; 
+}
+
+.inverted a{
+	color:rgba(255,255,255,.8);
+	text-decoration:none; 
+}
+
+a:hover {
+	color:#bd081c;
+	text-decoration:none;
+}
+
+.marginva{
+	margin:auto 0;
+}
+
+.main.menu {
+	background: #3c474a url(../img/hbg.png) no-repeat center top !important;
+	margin-bottom: 0rem !important;
+}
+
+.main.menu .header.item {
+	font-family:sans-serif;
+	font-size:large;
+}
+
+.main.menu .item img.logo {
+	margin-right: 1.5em;
+}
+
+#langsel {
+	background: rgba(224,225,226,.8)
+}
+
+.main.content {
+	min-height: 80%;
+	padding-top: 2rem;
+	padding-bottom: 5rem !important;
+}
+
+#noresgrid {
+	margin-top: 2em;
+	display: none;
+}
+
+.footer {	
+	background: #3c474a url('/img/fbg.png') no-repeat center bottom !important;
+}
+
+.footer .container div {
+	margin: 0.2rem 0 !important;
+}
+
+/*about.html*/
+.about .block.header {
+	background: url('/img/hbg.png') 100px 40px !important;
+}
