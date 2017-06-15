@@ -23,9 +23,12 @@
     "misc":{
         "search": "Search..."
     },
+    "library":{
+        "header": "<p>All of the projects or libraries listed below are nijigen-related. Use filters to find what you want: ) </p>"
+    },
     "about":{
         "intro":"Introduction",
         "introduction":"Moelib aims for providing various nijigen resources and informations",
-        "contributors":"Contributors"
+        "thanks":"Thanks"
     }
 }

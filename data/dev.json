@@ -67,7 +67,7 @@
     {
         "name":"Danbooru Downloader",
         "author":["Nandaka"],
-        "desc":"Downloader for Danbooru",
+        "desc":"Downloader for <a href='https://danbooru.donmai.us/'>Danbooru</a>",
         "source":"https://github.com/Nandaka/DanbooruDownloader",
         "link":"",
         "cats":["downloader"]
@@ -91,7 +91,7 @@
     {
         "name":"PixivUtil (Pixiv Downloader)",
         "author":["Nandaka"],
-        "desc":"Downloader and tag manager for [Pixiv](https://www.pixiv.net/).",
+        "desc":"Downloader and tag manager for <a href='https://www.pixiv.net/'>Pixiv</a>.",
         "source":"https://github.com/Nandaka/PixivUtil2",
         "link":"",
         "cats":["downloader"]
@@ -99,7 +99,7 @@
     {
         "name":"Pixiv Illust",
         "author":["HakurouKen"],
-        "desc":"Both a downloader and a third-party Node.js api for [Pixiv](https://www.pixiv.net/). ",
+        "desc":"Both a downloader and a third-party Node.js api for <a href='https://www.pixiv.net/'>Pixiv</a>. ",
         "source":"https://github.com/HakurouKen/pixiv-illust",
         "link":"",
         "cats":["downloader"]
@@ -115,9 +115,581 @@
     {
         "name":"AniDB API",
         "author":["AniDB"],
-        "desc":"Official API for AniDB.",
+        "desc":"Official API for <a href='https://anidb.net/'>AniDB</a>.",
         "source":"",
         "link":"https://wiki.anidb.net/w/API",
-        "cats":["datasource"]
-    }
+        "cats":["database"]
+    },
+    {
+		"name" : "Anilist API",
+		"author" : ["joshstar"],
+		"desc" : "Official API for <a href='https://anilist.co/'>Anilist</a>.",
+		"source" : "https://github.com/joshstar/AniList-API-Docs",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "Anilogia",
+		"author" : ["anilogia"],
+		"desc" : "Anime list database.",
+		"source" : "https://github.com/anilogia/animedb",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "anime-relations",
+		"author" : ["erengy"],
+		"desc" : "Episode redirections for Taiga.",
+		"source" : "https://github.com/erengy/anime-relations",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "Atarashii API",
+		"author" : [""],
+		"desc" : "Unofficial API for <a href='http://myanimelist.net/'>MyAnimeList</a>.",
+		"source" : "",
+		"link" : "https://bitbucket.org/ratan12/atarashii-api",
+		"cats" : ["database"]
+	}, {
+		"name" : "Bangumi Data",
+		"author" : ["bangumi-data"],
+		"desc" : "Raw data for Japanese Anime.",
+		"source" : "https://github.com/bangumi-data/bangumi-data",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "Dhufufu",
+		"author" : ["sorz"],
+		"desc" : "Additional API Docs for some Chinese ACG sites & Related Services (currently outdated).",
+		"source" : "https://github.com/sorz/dhufufu",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "E-HentaiCrawler",
+		"author" : ["shuiqukeyou"],
+		"desc" : "E-Heitai Crawler (Chinese).",
+		"source" : "https://github.com/shuiqukeyou/E-HentaiCrawler",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "一言（ヒトコト）",
+		"author" : [""],
+		"desc" : "Get random quotes from ACG.",
+		"source" : "",
+		"link" : "http://hitokoto.us/",
+		"cats" : ["database"]
+	}, {
+		"name" : "hummingbird.me",
+		"author" : [""],
+		"desc" : "Anime discovery platform.",
+		"source" : "https://github.com/hummingbird-me",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "nyaa",
+		"author" : ["nyaadevs"],
+		"desc" : "The software behind Nyaa.si.",
+		"source" : "https://github.com/nyaadevs/nyaa",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "NyaaPantsu",
+		"author" : ["NyaaPantsu"],
+		"desc" : "Nyaa.se replacement written in golang.",
+		"source" : "https://github.com/NyaaPantsu/nyaa",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "pixivpy",
+		"author" : ["upbit"],
+		"desc" : "Pixiv API for Python.",
+		"source" : "https://github.com/upbit/pixivpy",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "Vocaloid Database",
+		"author" : ["VocaDB"],
+		"desc" : "Server software used by <a href='http://vocadb.net/'>vocadb.net</a>.",
+		"source" : "https://github.com/VocaDB/vocadb",
+		"link" : "",
+		"cats" : ["database"]
+	}, {
+		"name" : "Animeloop",
+		"author" : [""],
+		"desc" : "Website for animeloop-cli.",
+		"source" : "",
+		"link" : "https://animeloop.org/",
+		"cats" : ["database"]
+	},
+    {
+		"name" : "aint.moe",
+		"author" : ["maxpowa"],
+		"desc" : "Your waifu aint moe.",
+		"source" : "https://github.com/maxpowa/aint.moe",
+		"link" : "",
+		"cats" : ["imageboard"]
+	}, {
+		"name" : "animeshot",
+		"author" : ["bitinn"],
+		"desc" : "Open and searchable image repository in Node.js.",
+		"source" : "https://github.com/bitinn/animeshot",
+		"link" : "",
+		"cats" : ["imageboard"]
+	}, {
+		"name" : "atogatari",
+		"author" : ["kingdido999"],
+		"desc" : "Share and discover your favorite anime characters.",
+		"source" : "https://github.com/kingdido999/atogatari",
+		"link" : "",
+		"cats" : ["imageboard"]
+	}, {
+		"name" : "BooruSurfer2",
+		"author" : ["spillerrec"],
+		"desc" : "Consistent and space-efficient interface to Booru-like image boards.",
+		"source" : "https://github.com/spillerrec/BooruSurfer2",
+		"link" : "",
+		"cats" : ["imageboard"]
+	}, {
+		"name" : "danbooru",
+		"author" : ["r888888888"],
+		"desc" : "Taggable image board written in Rails 4 for <a href='https://danbooru.donmai.us/'>danbooru.donmai.us</a>.",
+		"source" : "https://github.com/r888888888/danbooru",
+		"link" : "",
+		"cats" : ["imageboard"]
+	}, {
+		"name" : "Moebooru",
+		"author" : ["moebooru"],
+		"desc" : "Fork of danbooru1 that has been heavily modified. Used on <a href='https://yande.re/'>yande.re</a> , <a href='https://konachan.com/'>Konachan.com</a>.",
+		"source" : "https://github.com/moebooru/moebooru",
+		"link" : "",
+		"cats" : ["imageboard"]
+	}, {
+		"name" : "szurubooru",
+		"author" : ["rr-"],
+		"desc" : "Python-powered booru for small to medium communities.",
+		"source" : "https://github.com/rr-/szurubooru",
+		"link" : "",
+		"cats" : ["imageboard"]
+	}, {
+		"name" : "TagsTable",
+		"author" : ["zcyzcy88"],
+		"desc" : "Chinese ⇔ Engish translation table for common booru tags.",
+		"source" : "https://github.com/zcyzcy88/TagsTable",
+		"link" : "",
+		"cats" : ["imageboard"]
+	},
+    {
+		"name" : "cgCompress",
+		"author" : ["spillerrec"],
+		"desc" : "Compression tool tailored for Visual Novel CGs.",
+		"source" : "https://github.com/spillerrec/cgCompress",
+		"link" : "",
+		"cats" : ["imageprocessing"]
+	}, {
+		"name" : "chainer-DCGAN",
+		"author" : ["mattya"],
+		"desc" : "Generate anime face with neural network.",
+		"source" : "https://github.com/mattya/chainer-DCGAN",
+		"link" : "",
+		"cats" : ["imageprocessing"]
+	}, {
+		"name" : "hoshizora",
+		"author" : ["BlueCocoa"],
+		"desc" : "Merge two image by alpha channel to get displayed respectively on white/black background.",
+		"source" : "https://github.com/BlueCocoa/hoshizora",
+		"link" : "",
+		"cats" : ["imageprocessing"]
+	}, {
+		"name" : "animeloop-cli",
+		"author" : ["moeoverflow"],
+		"desc" : "Automatically detect and cut anime loops.",
+		"source" : "https://github.com/moeoverflow/animeloop-cli",
+		"link" : "",
+		"cats" : ["imageprocessing"]
+	}, {
+		"name" : "Overmix",
+		"author" : ["spillerrec"],
+		"desc" : "Automatic anime screenshot stitching in high quality.",
+		"source" : "https://github.com/spillerrec/Overmix",
+		"link" : "",
+		"cats" : ["imageprocessing"]
+	}, {
+		"name" : "PaintsChainer",
+		"author" : ["pfnet"],
+		"desc" : "Line drawing colorization using chainer.",
+		"source" : "https://github.com/pfnet/PaintsChainer",
+		"link" : "",
+		"cats" : ["imageprocessing"]
+	}, {
+		"name" : "waifu2x",
+		"author" : ["nagadomi"],
+		"desc" : "Image Super-Resolution for Anime-Style Art.",
+		"source" : "https://github.com/nagadomi/waifu2x",
+		"link" : "",
+		"cats" : ["imageprocessing"]
+	}, {
+		"name" : "waifu2x-converter-cpp",
+		"author" : ["tanakamura"],
+		"desc" : "Improved version of waifu2x.",
+		"source" : "https://github.com/tanakamura/waifu2x-converter-cpp",
+		"link" : "",
+		"cats" : ["imageprocessing"]
+	},
+    {
+		"name" : "AnimeFace Search v3",
+		"author" : [""],
+		"desc" : "Face detection for Anime. Powered by <a href='http://anime.udp.jp/imager-animeface.html'>Imager::AnimeFace</a> and <a href='https://github.com/nagadomi/otama'>otama - CBIR Engine</a>.",
+		"source" : "",
+		"link" : "http://animeface3.libotama.so/",
+		"cats" : ["imagerecognition"]
+	}, {
+		"name" : "Illustration2Vec",
+		"author" : ["rezoo"],
+		"desc" : "Semantic Vector Representation of Illustrations.",
+		"source" : "https://github.com/rezoo/illustration2vec",
+		"link" : "",
+		"cats" : ["imagerecognition"]
+	}, {
+		"name" : "lbpcascade_animeface",
+		"author" : ["nagadomi"],
+		"desc" : "Face detector for anime/manga using OpenCV.",
+		"source" : "https://github.com/nagadomi/lbpcascade_animeface",
+		"link" : "",
+		"cats" : ["imagerecognition"]
+	},
+    {
+		"name" : "ascii2d",
+		"author" : [""],
+		"desc" : "二次元画像詳細検索.",
+		"source" : "",
+		"link" : "http://www.ascii2d.net/",
+		"cats" : ["imagereversesearch"]
+	}, {
+		"name" : "Gochiusearch",
+		"author" : ["ksasao"],
+		"desc" : "Fast Scene Search Engine for 'Gochuumon wa Usagi Desuka?'.",
+		"source" : "https://github.com/ksasao/Gochiusearch",
+		"link" : "",
+		"cats" : ["imagereversesearch"]
+	}, {
+		"name" : "Firefox Add-on",
+		"author" : [""],
+		"desc" : "Search multiple image reverse search engines.",
+		"source" : "",
+		"link" : "https://addons.mozilla.org/en-US/firefox/addon/image-search-options/)",
+		"cats" : ["imagereversesearch"]
+	}, {
+		"name" : "iqdb",
+		"author" : [""],
+		"desc" : "Multi-service image search engine, source code <a href='https://iqdb.org/code/'>here</a>.",
+		"source" : "",
+		"link" : "https://iqdb.org/",
+		"cats" : ["imagereversesearch"]
+	}, {
+		"name" : "SauceNAO",
+		"author" : [""],
+		"desc" : "Reverse image search service, see database coverage <a href='https://saucenao.com/status.html'>here</a>.",
+		"source" : "",
+		"link" : "https://saucenao.com/",
+		"cats" : ["imagereversesearch"]
+	}, {
+		"name" : "saucenao.kgmi.moe",
+		"author" : [""],
+		"desc" : "Better front-end for SauceNAO.",
+		"source" : "",
+		"link" : "http://saucenao.kgmi.moe/",
+		"cats" : ["imagereversesearch"]
+	}, {
+		"name" : "WAIT: What Anime Is This?",
+		"author" : ["soruly"],
+		"desc" : "Anime scene search engine. Powered by <a href='https://github.com/dermotte/liresolr'>liresolr</a>.",
+		"source" : "https://github.com/soruly/whatanime.ga",
+		"link" : "",
+		"cats" : ["imagereversesearch"]
+	},
+    {
+		"name" : "Akhyou",
+		"author" : ["dulleh"],
+		"desc" : "Anime streaming app for Android.",
+		"source" : "https://github.com/dulleh/akhyou",
+		"link" : "",
+		"cats" : ["mobileapp"]
+	}, {
+		"name" : "Atarashii",
+		"author" : ["AnimeNeko"],
+		"desc" : "Android client for <a href='http://myanimelist.net/'>MyAnimeList</a>.",
+		"source" : "https://github.com/AnimeNeko/Atarashii",
+		"link" : "",
+		"cats" : ["mobileapp"]
+	}, {
+		"name" : "EhViewer",
+		"author" : ["seven332"],
+		"desc" : "Unofficial E-Hentai Application for Android.",
+		"source" : "https://github.com/seven332/EhViewer",
+		"link" : "",
+		"cats" : ["mobileapp"]
+	}, {
+		"name" : "KonaBot",
+		"author" : ["hkalexling"],
+		"desc" : "iOS client for <a href='http://konachan.net'>konachan.net</a>.",
+		"source" : "https://github.com/hkalexling/KonaBot-iOS",
+		"link" : "",
+		"cats" : ["mobileapp"]
+	}, {
+		"name" : "LNReader-Android",
+		"author" : ["calvinaquino"],
+		"desc" : "Light novel reader for android.",
+		"source" : "https://github.com/calvinaquino/LNReader-Android",
+		"link" : "",
+		"cats" : ["mobileapp"]
+	}, {
+		"name" : "Tachiyomi",
+		"author" : ["inorichi"],
+		"desc" : "Free and open source manga reader for Android.",
+		"source" : "https://github.com/inorichi/tachiyomi",
+		"link" : "",
+		"cats" : ["mobileapp"]
+	},
+    {
+		"name" : "gochiusa_lang",
+		"author" : ["dolciss"],
+		"desc" : "",
+		"source" : "https://github.com/dolciss/gochiusa_lang",
+		"link" : "",
+		"cats" : ["programlang"]
+	}, {
+		"name" : "hhiro_lang",
+		"author" : ["zonuexe"],
+		"desc" : "",
+		"source" : "https://github.com/zonuexe/hhiro_lang",
+		"link" : "",
+		"cats" : ["programlang"]
+	}, {
+		"name" : "kemono_friends_lang",
+		"author" : ["consomme"],
+		"desc" : "",
+		"source" : "https://github.com/consomme/kemono_friends_lang",
+		"link" : "",
+		"cats" : ["programlang"]
+	}, {
+		"name" : "nyaruko_lang",
+		"author" : ["masarakki"],
+		"desc" : "",
+		"source" : "https://github.com/masarakki/nyaruko_lang",
+		"link" : "",
+		"cats" : ["programlang"]
+	}, {
+		"name" : "We-i_lang",
+		"author" : ["oppai"],
+		"desc" : "",
+		"source" : "https://github.com/oppai/We-i_lang",
+		"link" : "",
+		"cats" : ["programlang"]
+	},
+    {
+		"name" : "aeneas",
+		"author" : ["readbeyond"],
+		"desc" : "Automagically synchronize audio and text.",
+		"source" : "https://github.com/readbeyond/aeneas",
+		"link" : "",
+		"cats" : ["subtitle"]
+	}, {
+		"name" : "ASS.js",
+		"author" : ["weizhenye"],
+		"desc" : "JavaScript ASS subtitle format renderer.",
+		"source" : "https://github.com/weizhenye/ASS",
+		"link" : "",
+		"cats" : ["subtitle"]
+	}, {
+		"name" : "JavascriptSubtitlesOctopus",
+		"author" : ["Dador"],
+		"desc" : "Displays subtitles in .ass format and easily integrates with HTML5 videos. Supports all SSA/ASS features.",
+		"source" : "https://github.com/Dador/JavascriptSubtitlesOctopus",
+		"link" : "",
+		"cats" : ["subtitle"]
+	}, {
+		"name" : "libjass",
+		"author" : ["Arnavion"],
+		"desc" : "Renders ASS subs in the browser.",
+		"source" : "https://github.com/Arnavion/libjass",
+		"link" : "",
+		"cats" : ["subtitle"]
+	}, {
+		"name" : "SubBuilder",
+		"author" : ["KamigamiSub"],
+		"desc" : "Toolset to help checking and organizing bilingual subtitles (諸神字幕組).",
+		"source" : "https://github.com/KamigamiSub/SubBuilder",
+		"link" : "",
+		"cats" : ["subtitle"]
+	},
+    {
+		"name" : "anitomy",
+		"author" : ["erengy"],
+		"desc" : "Anime video filename parser.",
+		"source" : "https://github.com/erengy/anitomy",
+		"link" : "",
+		"cats" : ["tool"]
+	}, {
+		"name" : "arc_unpacker",
+		"author" : ["vn-tools"],
+		"desc" : "Visual novel extracting tool in CLI.",
+		"source" : "https://github.com/vn-tools/arc_unpacker",
+		"link" : "",
+		"cats" : ["tool"]
+	}, {
+		"name" : "bgm",
+		"author" : ["egoist"],
+		"desc" : "Display bangumi list in CLI.",
+		"source" : "https://github.com/egoist/bgm",
+		"link" : "",
+		"cats" : ["tool"]
+	}, {
+		"name" : "Comicbook",
+		"author" : ["moeoverflow"],
+		"desc" : "Convert online comics to .epub e-book.",
+		"source" : "https://github.com/moeoverflow/comicbook",
+		"link" : "",
+		"cats" : ["tool"]
+	}, {
+		"name" : "kuroshiro.js",
+		"author" : ["hexenq"],
+		"desc" : "Japanese language utility mainly for converting Kanji-mixed sentence to Hiragana, Katakana or Romaji with furigana and okurigana modes supported.",
+		"desc_zh": "kuroshiro.js是一个十分方便使用的日文转换注音工具，主要针对含有日文汉字的文本，进行到平假名、片假名及罗马字的转换，并支持注音假名、送假名 （旁注音）等注音模式。",
+		"source" : "https://github.com/hexenq/kuroshiro.js",
+		"link" : "",
+		"cats" : ["tool"]
+	}, {
+		"name" : "OpenCC",
+		"author" : ["BYVoid"],
+		"desc" : "Project for conversion between Traditional and Simplified Chinese.",
+		"source" : "https://github.com/BYVoid/OpenCC",
+		"link" : "",
+		"cats" : ["tool"]
+	}, {
+		"name" : "rankit.ikely.me",
+		"author" : [""],
+		"desc" : "Scientific ranking of anime ratings by <a href='https://github.com/wattlebird/ranking'>Rankit</a>.",
+		"source" : "",
+		"link" : "http://rankit.ikely.me/",
+		"cats" : ["tool"]
+	}, {
+		"name" : "Taiga",
+		"author" : ["erengy"],
+		"desc" : "Lightweight anime tracker for Windows.",
+		"source" : "https://github.com/erengy/taiga",
+		"link" : "",
+		"cats" : ["tool"]
+	},
+    {
+		"name" : "Bangumi scripts",
+		"author" : ["bangumi"],
+		"desc" : "Collection of user scripts for <a href='http://bangumi.tv'>bangumi.tv</a>.",
+		"source" : "https://github.com/bangumi/scripts",
+		"link" : "",
+		"cats" : ["web"]
+	}, {
+		"name" : "Deneb",
+		"author" : ["lordfriend"],
+		"desc" : "Web client for <a href='https://github.com/lordfriend/Albireo'>Albireo</a>.",
+		"source" : "https://github.com/lordfriend/Deneb",
+		"link" : "",
+		"cats" : ["web"]
+	}, {
+		"name" : "KarasamaEgg",
+		"author" : ["ClassicOldSong"],
+		"desc" : "KarasamaEgg dynamic wallpaper for WallpaperEngine.",
+		"source" : "https://github.com/ClassicOldSong/KarasamaEgg",
+		"link" : "",
+		"cats" : ["web"]
+	}, {
+		"name" : "pixi-live2d",
+		"author" : ["avgjs"],
+		"desc" : "Display live2D model as a sprite in pixi.js.",
+		"source" : "https://github.com/avgjs/pixi-live2d",
+		"link" : "",
+		"cats" : ["web"]
+	}, {
+		"name" : "Pixiv Search Result Unlocker",
+		"author" : ["soruly"],
+		"desc" : "Allows you to click on blocked pictures.",
+		"source" : "https://github.com/soruly/Pixiv-Search-Result-Unlocker",
+		"link" : "",
+		"cats" : ["web"]
+	}, {
+		"name" : "WebLive2D",
+		"author" : ["yutarochan"],
+		"desc" : "Rebuild of Cybernoids' Live2D demo for interactive systems on mobile platforms.",
+		"source" : "https://github.com/yutarochan/WebLive2D",
+		"link" : "",
+		"cats" : ["web"]
+	},
+    {
+		"name" : "AnimeEffects",
+		"author" : ["hidefuku"],
+		"desc" : "2D Animation Tool.",
+		"source" : "https://github.com/hidefuku/AnimeEffects",
+		"link" : "",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "avatars.moe",
+		"author" : [""],
+		"desc" : "Automatic avatars generator.",
+		"source" : "",
+		"link" : "https://avatars.moe/",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "doko.moe",
+		"author" : [""],
+		"desc" : "Free file hosting and Bittorrent tracker.",
+		"source" : "",
+		"link" : "https://doko.moe/",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "hanabi",
+		"author" : ["egoist"],
+		"desc" : "Colorful syntax highlighter inspired by <a href='http://pronama.azurewebsites.net/2017/02/23/kemono-friends-syntax-highlight/'>kemono-friends-syntax-highlight</a> and <a href='https://gist.github.com/kuwa72/753f8ae998a84dda184c21cc874bd694'>its friends</a>.",
+		"source" : "https://github.com/egoist/hanabi",
+		"link" : "",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "japari-pedia",
+		"author" : ["miyaoka"],
+		"desc" : "Chrome extension that turns Wikipedia into Japari-Library.",
+		"source" : "https://github.com/miyaoka/japari-pedia",
+		"link" : "",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "kemonogen",
+		"author" : ["aratama"],
+		"desc" : "Kemono Friends logo generator.",
+		"source" : "https://github.com/aratama/kemonogen",
+		"link" : "",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "Kemono Adblocker",
+		"author" : ["akira02"],
+		"desc" : "Replace Advertisements with Kenomo Friends pictures using perceptual techniques.",
+		"source" : "https://github.com/akira02/Kemono_Adblocker",
+		"link" : "",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "nKemono",
+		"author" : ["cornguo"],
+		"desc" : "Replaces all images with Kemono Friends. (<a href='https://chrome.google.com/webstore/detail/nkemono/pfeabhccnkpilbkjncnndoahffhjgkak'>Chrome Extension</a>)",
+		"source" : "https://github.com/cornguo/nKemono",
+		"link" : "",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "n_jigen_bot",
+		"author" : [""],
+		"desc" : "Telegram bot. Identify if an image is 二次元 or 三次元.",
+		"source" : "",
+		"link" : "https://t.me/n_jigen_bot",
+		"cats" : ["uncat"]
+	}, {
+		"name" : "notify.moe",
+		"author" : ["animenotifier"],
+		"desc" : "Fetches your anime \"watching\" list and notifies you when a new anime episode is available.",
+		"source" : "https://github.com/animenotifier/notify.moe",
+		"link" : "",
+		"cats" : ["uncat"]
+	}
 ]
