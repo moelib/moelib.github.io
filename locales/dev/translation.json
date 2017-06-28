@@ -21,10 +21,12 @@
         "uncat": "Uncategorized"
     },
     "misc":{
+        "clicktoedit": "<i class='edit icon'></i>click here",
+        "contribute": "Want to contribute? ",
         "search": "Search..."
     },
-    "library":{
-        "header": "<p>All of the projects or libraries listed below are nijigen-related. Use filters to find what you want: ) </p>"
+    "library":{        
+        "header": "All of the projects or libraries listed below are nijigen-related. Use filters to find what you want: ) "
     },
     "about":{
         "intro":"Introduction",

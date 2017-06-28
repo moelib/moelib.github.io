@@ -21,10 +21,12 @@
         "uncat": "未分类"
     },
     "misc":{
+        "clicktoedit": "<i class='edit icon'></i>点击这里",
+        "contribute": "想要贡献内容？ ",
         "search": "检索..."
     },
     "library":{
-        "header": "<p>下面所列的都是与二次元相关的项目和库。使用过滤器搜索你想要的内容: )</p>"
+        "header": "下面所列的都是与二次元相关的项目和库。使用过滤器搜索你想要的内容: )"
     },
     "about":{
         "intro":"网站介绍",
