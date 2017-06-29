@@ -1,0 +1,19 @@
+{
+  "name": "moelib",
+  "version": "1.0.0",
+  "description": "Moelib aims for providing various nijigen resources and informations.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moelib/moelib.github.io.git"
+  },
+  "author": "Hexen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moelib/moelib.github.io/issues"
+  },
+  "homepage": "https://github.com/moelib/moelib.github.io#readme"
+}
