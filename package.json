@@ -11,9 +11,21 @@
     "url": "git+https://github.com/moelib/moelib.github.io.git"
   },
   "author": "Hexen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/moelib/moelib.github.io/issues"
   },
-  "homepage": "https://github.com/moelib/moelib.github.io#readme"
+  "homepage": "https://github.com/moelib/moelib.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.4.2",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-swig": "^0.8.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
+    "run-sequence": "^1.2.2"
+  }
 }

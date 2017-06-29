@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>    
-    
+    {% block title %}
     <title>MoeLib</title>
-    
+    {% endblock %}
     <meta charset="UTF-8">
     <meta name="keywords" content="二次元,萌,资源,应用,技术,dev,app,moe,api,lib,library,萌え,リブ,ライブラリ,アプリ,資源">
     <meta name="description" content="Moelib aims for providing various nijigen resources and informations.">
@@ -11,7 +11,7 @@
     <link href="css/semantic.min.css" rel="stylesheet" type="text/css">
     <link href="css/icon.min.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    
+    {% block head %}{% endblock %}
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -53,18 +53,7 @@
     </div>
 </div>
 <div class="main content">
-
-<div class="about ui text container">
-    <h4 class="ui top attached block header" data-i18n="about.intro"></h4>
-    <div class="ui bottom attached segment" data-i18n="about.introduction"></div>
-    <h4 class="ui top attached block header" data-i18n="about.thanks"></h4>
-    <div class="ui bottom attached segment">
-        <div class="ui bulleted list">
-            <div class="item"><a href="https://github.com/soruly/awesome-acg">awesome-acg</a></div>
-        </div>
-    </div>        
-</div>    
-
+{% block content %}{% endblock %}
 </div>
 <div class="ui inverted vertical footer segment">
     <div class="ui center aligned container">   
@@ -84,7 +73,7 @@
 <script src="js/lodash.min.js"></script>
 <script src="js/rivets.bundled.min.js"></script>
 <script src="js/pace.min.js"></script>
-
+{% block script %}{% endblock %}
 <script>
     $(window).on('load', function () {
         window.moe = {
