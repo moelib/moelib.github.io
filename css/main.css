@@ -3,6 +3,12 @@
   padding: 0;
 }*/
 
+body{
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 a{
 	color:#3c474a;
 	text-decoration:none; 
@@ -26,6 +32,7 @@ a:hover {
 	background: #3c474a url(../img/hbg.png) no-repeat center top !important;
 	margin-bottom: 0rem !important;
 	margin-top:0rem !important;
+	flex: none;
 }
 
 .main.menu .header.item {
@@ -42,9 +49,10 @@ a:hover {
 }
 
 .main.content {
-	min-height: 80%;
 	padding-top: 2rem;
 	padding-bottom: 5rem !important;
+	
+	flex: 1 0 auto; 
 }
 
 #noresgrid {
@@ -54,6 +62,7 @@ a:hover {
 
 .footer {	
 	background: #3c474a url('/img/fbg.png') no-repeat center bottom !important;
+	flex: none;
 }
 
 .footer .container div {
